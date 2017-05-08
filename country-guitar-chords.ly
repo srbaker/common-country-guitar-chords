@@ -21,20 +21,21 @@ commonCountryChordProgressionInKey = #(define-music-function
                           \transpose g #key { \commonCountryChordProgressionInG }
                           #})
 
+\layout {
+  ragged-last = ##f
+  \context {
+    \Score
+    \once \override Staff.TimeSignature #'stencil = ##f % turn off the time signature
+    \remove "Bar_number_engraver"
+  }
+}
+
 \score {
   <<
     \new ChordNames { \commonCountryChordProgressionInKey g }
     \new FretBoards { \commonCountryChordProgressionInKey g }
     \new Staff { \commonCountryChordProgressionInKey g }
   >>
-  \layout {
-    ragged-last = ##f
-    \context {
-      \Score
-      \once \override Staff.TimeSignature #'stencil = ##f % turn off the time signature
-      \remove "Bar_number_engraver"
-    }
-  }
   \header { piece = "Key of G" }
 }
 
@@ -44,14 +45,6 @@ commonCountryChordProgressionInKey = #(define-music-function
     \new FretBoards { \commonCountryChordProgressionInKey a }
     \new Staff { \commonCountryChordProgressionInKey a }
   >>
-  \layout {
-    ragged-last = ##f
-    \context {
-      \Score
-      \once \override Staff.TimeSignature #'stencil = ##f % turn off the time signature
-      \remove "Bar_number_engraver"
-    }
-  }
   \header { piece = "Key of A" }
 }
 
@@ -61,14 +54,6 @@ commonCountryChordProgressionInKey = #(define-music-function
     \new FretBoards { \commonCountryChordProgressionInKey d }
     \new Staff { \commonCountryChordProgressionInKey d }
   >>
-  \layout {
-    ragged-last = ##f
-    \context {
-      \Score
-      \once \override Staff.TimeSignature #'stencil = ##f % turn off the time signature
-      \remove "Bar_number_engraver"
-    }
-  }
   \header { piece = "Key of D" }
 }
 
@@ -78,14 +63,6 @@ commonCountryChordProgressionInKey = #(define-music-function
     \new FretBoards { \commonCountryChordProgressionInKey e }
     \new Staff { \commonCountryChordProgressionInKey e }
   >>
-  \layout {
-    ragged-last = ##f
-    \context {
-      \Score
-      \once \override Staff.TimeSignature #'stencil = ##f % turn off the time signature
-      \remove "Bar_number_engraver"
-    }
-  }
   \header { piece = "Key of E" }
 }
 
@@ -95,13 +72,5 @@ commonCountryChordProgressionInKey = #(define-music-function
     \new FretBoards { \commonCountryChordProgressionInKey c }
     \new Staff { \commonCountryChordProgressionInKey c }
   >>
-  \layout {
-    ragged-last = ##f
-    \context {
-      \Score
-      \once \override Staff.TimeSignature #'stencil = ##f % turn off the time signature
-      \remove "Bar_number_engraver"
-    }
-  }
   \header { piece = "Key of C" }
 }
