@@ -21,6 +21,17 @@ commonCountryChordProgressionInKey = #(define-music-function
                                        \transpose g #key { \commonCountryChordProgressionInG }
                                        #})
 
+commonCountryChordProgressionScoreInKey = #(define-music-function
+                                            (parser location key)
+                                            (ly:pitch?)
+                                            #{
+                                            <<
+                                              \new ChordNames { \commonCountryChordProgressionInKey #key }
+                                              \new FretBoards { \commonCountryChordProgressionInKey #key }
+                                              \new Staff { \commonCountryChordProgressionInKey #key }
+                                            >>
+                                            #})
+
 \layout {
   ragged-last = ##f
   \context {
@@ -31,46 +42,26 @@ commonCountryChordProgressionInKey = #(define-music-function
 }
 
 \score {
-  <<
-    \new ChordNames { \commonCountryChordProgressionInKey g }
-    \new FretBoards { \commonCountryChordProgressionInKey g }
-    \new Staff { \commonCountryChordProgressionInKey g }
-  >>
   \header { piece = "Key of G" }
+  \commonCountryChordProgressionScoreInKey g
 }
 
 \score {
-  <<
-    \new ChordNames { \commonCountryChordProgressionInKey a }
-    \new FretBoards { \commonCountryChordProgressionInKey a }
-    \new Staff { \commonCountryChordProgressionInKey a }
-  >>
   \header { piece = "Key of A" }
+  \commonCountryChordProgressionScoreInKey a
 }
 
 \score {
-  <<
-    \new ChordNames { \commonCountryChordProgressionInKey d }
-    \new FretBoards { \commonCountryChordProgressionInKey d }
-    \new Staff { \commonCountryChordProgressionInKey d }
-  >>
   \header { piece = "Key of D" }
+  \commonCountryChordProgressionScoreInKey d
 }
 
 \score {
-  <<
-    \new ChordNames { \commonCountryChordProgressionInKey e }
-    \new FretBoards { \commonCountryChordProgressionInKey e }
-    \new Staff { \commonCountryChordProgressionInKey e }
-  >>
   \header { piece = "Key of E" }
+  \commonCountryChordProgressionScoreInKey e
 }
 
 \score {
-  <<
-    \new ChordNames { \commonCountryChordProgressionInKey c }
-    \new FretBoards { \commonCountryChordProgressionInKey c }
-    \new Staff { \commonCountryChordProgressionInKey c }
-  >>
   \header { piece = "Key of C" }
+  \commonCountryChordProgressionScoreInKey c
 }
