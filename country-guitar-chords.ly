@@ -10,15 +10,22 @@
   subsubtitle = "Most popular guitar chords used in country music."
 }
 
-commonCountryChords = \chordmode {
+commonCountryChordProgressionInG = \chordmode {
   g c d:7 e:m
 }
 
+commonCountryChordProgressionInKey = #(define-music-function
+                          (parser location key)
+                          (ly:pitch?)
+                          #{
+                          \transpose g #key { \commonCountryChordProgressionInG }
+                          #})
+
 \score {
   <<
-    \new ChordNames { \transpose g g { \commonCountryChords } }
-    \new FretBoards { \transpose g g { \commonCountryChords } }
-    \new Staff { \transpose g g { \commonCountryChords } }
+    \new ChordNames { \commonCountryChordProgressionInKey g }
+    \new FretBoards { \commonCountryChordProgressionInKey g }
+    \new Staff { \commonCountryChordProgressionInKey g }
   >>
   \layout {
     ragged-last = ##f
@@ -33,9 +40,9 @@ commonCountryChords = \chordmode {
 
 \score {
   <<
-    \new ChordNames { \transpose g a { \commonCountryChords } }
-    \new FretBoards { \transpose g a { \commonCountryChords } }
-    \new Staff { \transpose g a { \commonCountryChords } }
+    \new ChordNames { \commonCountryChordProgressionInKey a }
+    \new FretBoards { \commonCountryChordProgressionInKey a }
+    \new Staff { \commonCountryChordProgressionInKey a }
   >>
   \layout {
     ragged-last = ##f
@@ -50,9 +57,9 @@ commonCountryChords = \chordmode {
 
 \score {
   <<
-    \new ChordNames { \transpose g d { \commonCountryChords } }
-    \new FretBoards { \transpose g d { \commonCountryChords } }
-    \new Staff { \transpose g d { \commonCountryChords } }
+    \new ChordNames { \commonCountryChordProgressionInKey d }
+    \new FretBoards { \commonCountryChordProgressionInKey d }
+    \new Staff { \commonCountryChordProgressionInKey d }
   >>
   \layout {
     ragged-last = ##f
@@ -67,9 +74,9 @@ commonCountryChords = \chordmode {
 
 \score {
   <<
-    \new ChordNames { \transpose g e { \commonCountryChords } }
-    \new FretBoards { \transpose g e { \commonCountryChords } }
-    \new Staff { \transpose g e { \commonCountryChords } }
+    \new ChordNames { \commonCountryChordProgressionInKey e }
+    \new FretBoards { \commonCountryChordProgressionInKey e }
+    \new Staff { \commonCountryChordProgressionInKey e }
   >>
   \layout {
     ragged-last = ##f
@@ -84,9 +91,9 @@ commonCountryChords = \chordmode {
 
 \score {
   <<
-    \new ChordNames { \transpose g c { \commonCountryChords } }
-    \new FretBoards { \transpose g c { \commonCountryChords } }
-    \new Staff { \transpose g c { \commonCountryChords } }
+    \new ChordNames { \commonCountryChordProgressionInKey c }
+    \new FretBoards { \commonCountryChordProgressionInKey c }
+    \new Staff { \commonCountryChordProgressionInKey c }
   >>
   \layout {
     ragged-last = ##f
