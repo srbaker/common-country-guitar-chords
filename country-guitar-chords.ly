@@ -15,11 +15,11 @@ commonCountryChordProgressionInG = \chordmode {
 }
 
 commonCountryChordProgressionInKey = #(define-music-function
-                          (parser location key)
-                          (ly:pitch?)
-                          #{
-                          \transpose g #key { \commonCountryChordProgressionInG }
-                          #})
+                                       (parser location key)
+                                       (ly:pitch?)
+                                       #{
+                                       \transpose g #key { \commonCountryChordProgressionInG }
+                                       #})
 
 \layout {
   ragged-last = ##f
