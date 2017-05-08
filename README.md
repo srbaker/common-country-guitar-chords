@@ -1,7 +1,7 @@
 # Common Country Guitar Chord Progressions
 
-I am learning how to play guitar guitar, and found a site that listed
-common chord progressions used in country music
+I am learning how to play guitar, and found a site that listed common
+chord progressions used in country music
 [here](http://www.songwriting-unlimited.com/country-guitar-chords.html#gallery[pageGallery]/0/)
 
 I used it as an excuse to learn GNU Lilypond and typeset the
